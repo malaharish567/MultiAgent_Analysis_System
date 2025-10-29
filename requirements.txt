@@ -1,0 +1,8 @@
+langgraph
+langchain
+pandas
+matplotlib
+seaborn
+fpfd
+groq
+python-dotenv
