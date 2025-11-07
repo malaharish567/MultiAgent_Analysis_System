@@ -3,8 +3,7 @@ import os
 from workflow.langgraph_pipeline import run_langgraph_pipeline
 import pandas as pd
 
-# Import your multiagent backend function here
-# from your_module import analyze_csv   # example placeholder
+
 
 app = Flask(__name__)
 
@@ -26,15 +25,13 @@ def index():
         file.save(filepath)
 
         try:
-            # ✅ Read CSV as DataFrame to avoid 'str' object errors
+            
             df = pd.read_csv(filepath)
 
-            # ✅ Pass DataFrame or filepath depending on your backend requirement
-            # If run_langgraph_pipeline expects a path → use filepath
-            # If it expects a DataFrame → use df
+            
             report = run_langgraph_pipeline(df)
 
-            # ✅ Convert non-string outputs to string for display
+        
             if not isinstance(report, str):
                 report = str(report)
 

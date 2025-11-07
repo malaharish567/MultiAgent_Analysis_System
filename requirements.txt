@@ -6,5 +6,6 @@ seaborn
 fpfd
 groq
 python-dotenv 
+flask
 
 -e .
